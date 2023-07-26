@@ -1,0 +1,38 @@
+{% extends 'chat/base.html'  %}
+
+{% block title %} SignUp | {% endblock %}
+
+{% block content%}
+
+<div class="p-10 lg:p-20 text-center">
+    <h1 class="text-3xl lg:text-6xl  font-bold text-white text-center">
+        Sign Up
+    </h1>
+
+</div>
+
+<form method="post" action="." class=" mx-2  lg:w-1/4 px-5 py-5 mx-auto bg-gray-200 border border-gray-300 rounded-md dropshadow-md  ">
+    {% csrf_token %}
+
+    <div class="mb-5">
+        <label class="text-blue-500 m-4 p-2 ">Username</label>
+        <input type="text" name="Username" placeholder="username...." class=" w-full m-2 p-3 rounded-md bg-gray-300 text-white "/>
+
+    </div>
+
+    <div class="mb-5">
+        <label class="text-blue-500 m-4 p-2 ">Password</label>
+        <input type="password" name="password1" placeholder="password...." class=" w-full m-2 p-3 rounded-md bg-gray-300 text-white "/>
+
+    </div>
+
+    <div class="mb-5">
+        <label class="text-blue-500 m-4 p-2 ">Confirm Password</label>
+        <input type="password" name="password2" placeholder="confirm password..." class=" w-full m-2 p-3 rounded-md bg-gray-300 text-white "/>
+
+    </div>
+
+
+</form>
+
+{% endblock %}
